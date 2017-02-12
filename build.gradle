@@ -24,5 +24,8 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+    compile("org.springframework.boot:spring-boot-starter-data-rest")
+    compile("org.projectlombok:lombok:1.16.10")
     testCompile("junit:junit")
 }
