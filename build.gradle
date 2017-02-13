@@ -8,7 +8,7 @@ buildscript {
 }
 
 group 'com.lijojacob.microxs.demo'
-version '1.0-SNAPSHOT'
+version '1.0.0.RELEASE'
 
 apply plugin: 'java'
 apply plugin: 'eclipse'

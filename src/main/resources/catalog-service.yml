@@ -1,9 +1,9 @@
 spring:
   application:
-    name: catalog-server
+    name: catalog-service
   data:
     rest:
-      base-path: /catalog
+      base-path: /catalog-service
     mongodb:
       host: ${MICROXS_COMMERCE_MONGO_SERVICE_HOST:localhost}
       port: ${MICROXS_COMMERCE_MONGO_SERVICE_PORT:27017}
