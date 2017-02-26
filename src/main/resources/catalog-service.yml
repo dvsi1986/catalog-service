@@ -1,17 +1,28 @@
 spring:
   application:
     name: catalog-service
+
+---
+spring:
+  profiles: default
   data:
     rest:
       base-path: /catalog-service
     mongodb:
-      host: ${MICROXS_COMMERCE_MONGO_SERVICE_HOST:localhost}
-      port: ${MICROXS_COMMERCE_MONGO_SERVICE_PORT:27017}
+      host: localhost
+      port: 27017
       database: catalog
       repositories:
         enabled: true
-
-
-# HTTP Server
-server:
-  port: ${PORT:3333}   # HTTP (Tomcat) port
+---
+spring:
+  profiles: development
+  cloud:
+    config:
+      uri: http://${MICROXS_COMMERCE_CONFIG_SERVICE_HOST:localhost}:${MICROXS_COMMERCE_CONFIG_SERVICE_PORT:8888}
+---
+spring:
+  profiles: cloud
+  cloud:
+    config:
+      uri: http://${MICROXS_COMMERCE_CONFIG_SERVICE_HOST:localhost}:${MICROXS_COMMERCE_CONFIG_SERVICE_PORT:8888}
