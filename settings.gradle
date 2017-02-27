@@ -1,2 +1,4 @@
 rootProject.name = 'catalog-service'
 
+include 'client'
+include 'server'

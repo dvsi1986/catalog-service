@@ -1,6 +1,5 @@
 package com.lijojacob.microxs.demo.catalog.entity;
 
-import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.TextIndexed;
@@ -20,7 +19,6 @@ public @Data class Product {
     @Id
     private String id;
 
-    @JsonPropertyDescription("Version of product")
     private int version;
 
     @TextIndexed
