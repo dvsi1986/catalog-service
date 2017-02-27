@@ -10,6 +10,7 @@ buildscript {
 group 'com.lijojacob.microxs.demo'
 version '1.0.0.RELEASE'
 
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
@@ -22,7 +23,9 @@ repositories {
     mavenCentral()
 }
 
+// Disabling packaging for spring boot, and also bootRun, as this is a client JAR project, and not executable.
 bootRepackage.enabled = false
+bootRun.enabled = false
 
 
 dependencies {
